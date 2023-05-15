@@ -6,19 +6,16 @@ class CustomItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height *.3,
-      child: AspectRatio(
-        aspectRatio: 1.5/2.5,
+    return AspectRatio(
+      aspectRatio: 1.5/2.5,
 
-        child: Container(
-          decoration:  BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-            image: const DecorationImage(
-              image: AssetImage(AssetData.testImage),
-              fit: BoxFit.cover
-            )
-          ),
+      child: Container(
+        decoration:  BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+          image: const DecorationImage(
+            image: AssetImage(AssetData.testImage),
+            fit: BoxFit.cover
+          )
         ),
       ),
     );
