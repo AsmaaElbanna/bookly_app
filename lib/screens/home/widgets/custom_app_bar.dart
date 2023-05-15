@@ -1,3 +1,4 @@
+import 'package:bookly_app/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -10,7 +11,7 @@ class CustomAppBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
       child: Row(
         children: [
-          Image.asset('assets/images/Logo.png',width: 100),
+          Image.asset(AssetData.logo,width: 100),
           const Spacer(),
           IconButton(onPressed: (){}, icon: const FaIcon(FontAwesomeIcons.magnifyingGlass))
         ],

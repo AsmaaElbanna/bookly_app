@@ -1,3 +1,4 @@
+import 'package:bookly_app/assets.dart';
 import 'package:bookly_app/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
@@ -44,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen>
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Image.asset('assets/images/Logo.png'),
+          Image.asset(AssetData.logo),
           const SizedBox(height: 5),
           AnimatedBuilder(
             animation: slidingAnimation,
