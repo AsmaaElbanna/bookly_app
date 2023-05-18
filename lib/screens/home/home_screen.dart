@@ -1,11 +1,9 @@
-import 'package:bookly_app/screens/home/widgets/best_seller_list_item.dart';
 import 'package:bookly_app/screens/home/widgets/best_seller_list_view.dart';
 import 'package:bookly_app/screens/home/widgets/custom_app_bar.dart';
-import 'package:bookly_app/screens/home/widgets/book_list_item.dart';
 import 'package:bookly_app/screens/home/widgets/featured_book_list.dart';
-import 'package:bookly_app/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../utils/styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
