@@ -1,5 +1,6 @@
 import 'package:bookly_app/const.dart';
 import 'package:bookly_app/screens/home/widgets/custom_book_item.dart';
+import 'package:bookly_app/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -27,8 +28,16 @@ class DetailsScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: CustomBookItem())
+            Padding(padding: EdgeInsets.symmetric(horizontal: width * 0.25),
+            child: const CustomBookItem()),
+            const SizedBox(height: 40,),
+            Text('The Jungle Book',
+              style: Styles.textStyle30.copyWith(fontFamily: kGtSectraFine),
+            ),
+            const SizedBox(height: 6,),
+            Text('Rudyard Kipling',
+              style: Styles.textStyle16.copyWith(color: Colors.grey),
+            ),
           ],
 
         ),

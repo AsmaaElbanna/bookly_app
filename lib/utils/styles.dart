@@ -6,6 +6,10 @@ abstract class Styles{
     fontSize: 16,
     fontWeight: FontWeight.bold /// semi bold
   );
+  static const textStyle30 = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold /// semi bold
+  );
   static const textStyle14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w600   /// semi bold
