@@ -1,4 +1,5 @@
 import 'package:bookly_app/const.dart';
+import 'package:bookly_app/screens/home/widgets/book_rating.dart';
 import 'package:bookly_app/screens/home/widgets/custom_book_item.dart';
 import 'package:bookly_app/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,7 @@ class DetailsScreen extends StatelessWidget {
             Text('Rudyard Kipling',
               style: Styles.textStyle16.copyWith(color: Colors.grey),
             ),
+            BookRating()
           ],
 
         ),
