@@ -1,3 +1,4 @@
+import 'package:bookly_app/common_widget/custom_button.dart';
 import 'package:bookly_app/const.dart';
 import 'package:bookly_app/screens/home/widgets/book_rating.dart';
 import 'package:bookly_app/screens/home/widgets/custom_book_item.dart';
@@ -39,7 +40,9 @@ class DetailsScreen extends StatelessWidget {
             Text('Rudyard Kipling',
               style: Styles.textStyle16.copyWith(color: Colors.grey),
             ),
-            BookRating()
+            const SizedBox(height: 10),
+            const BookRating(),
+            const BookAction()
           ],
 
         ),
@@ -47,3 +50,17 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
+
+class BookAction extends StatelessWidget {
+  const BookAction({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: const [
+        CustomButton()
+      ],
+    );
+  }
+}
+
