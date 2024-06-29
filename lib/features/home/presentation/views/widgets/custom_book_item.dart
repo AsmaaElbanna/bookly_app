@@ -2,7 +2,7 @@ import 'package:bookly_app/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../utils/app_router.dart';
+import '../../../../../utils/app_router.dart';
 
 class CustomBookItem extends StatelessWidget {
   const CustomBookItem({Key? key}) : super(key: key);

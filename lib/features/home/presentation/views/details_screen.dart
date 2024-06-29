@@ -1,10 +1,11 @@
 import 'package:bookly_app/common_widget/custom_button.dart';
 import 'package:bookly_app/const.dart';
-import 'package:bookly_app/screens/home/widgets/book_rating.dart';
-import 'package:bookly_app/screens/home/widgets/custom_book_item.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly_app/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import 'widgets/book_rating.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({Key? key}) : super(key: key);

@@ -1,7 +1,12 @@
-import 'package:bookly_app/utils/app_router.dart';
+import 'package:bookly_app/const.dart';
 import 'package:bookly_app/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../utils/app_router.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -23,24 +28,12 @@ class _SplashScreenState extends State<SplashScreen>
     navigateToHome();
   }
 
-  void navigateToHome() {
-     Future.delayed(
-      const Duration(seconds: 3),
-      () {
-        /// Using goRouter
-        GoRouter.of(context).push(AppRouter.kHomeView);
 
-        // Get.to(const HomeScreen(),
-        //     duration: const Duration(seconds: 3), transition: Transition.fade);
-/// using Get package
-        // Get.to(()=>const HomeScreen(), duration: const Duration(seconds: 3),transition: Transition.fadeIn);
-      },
-    );
-  }
 
   @override
   void dispose() {
     super.dispose();
+    animationController.dispose();
   }
 
   @override
@@ -57,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen>
             builder: (BuildContext context, Widget? child) {
               return SlideTransition(
                   position: slidingAnimation,
-                  child: Text('Read free books', textAlign: TextAlign.center));
+                  child: const Text('Read free books', textAlign: TextAlign.center));
             },
           ),
         ],
@@ -72,5 +65,21 @@ class _SplashScreenState extends State<SplashScreen>
         Tween<Offset>(begin: const Offset(0, 8), end: Offset.zero)
             .animate(animationController);
     animationController.forward();
+  }
+  void navigateToHome() {
+    Future.delayed(
+      const Duration(seconds: 3),
+          () {
+        /// Using goRouter
+        GoRouter.of(context).push(AppRouter.kHomeView);
+
+        // Get.to(const HomeScreen());
+
+        // Get.to( AppRouter.kHomeView,
+        //     duration: kTransitionDuration, transition: Transition.fade);
+        /// using Get package
+        // Get.to(()=>const HomeScreen(), duration: const Duration(seconds: 3),transition: Transition.fadeIn);
+      },
+    );
   }
 }

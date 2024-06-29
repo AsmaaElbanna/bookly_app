@@ -1,7 +1,8 @@
-import 'package:bookly_app/screens/details/details_screen.dart';
-import 'package:bookly_app/screens/home/home_screen.dart';
-import 'package:bookly_app/screens/splash_screen.dart';
+import 'package:bookly_app/features/home/presentation/views/details_screen.dart';
+import 'package:bookly_app/features/home/presentation/views/home_screen.dart';
 import 'package:go_router/go_router.dart';
+
+import '../features/splash/presentation/views/splash_screen.dart';
 
 abstract class AppRouter {
   static String kHomeView = '/homeView';
