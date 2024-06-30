@@ -1,10 +1,10 @@
-import 'package:bookly_app/common_widget/custom_button.dart';
 import 'package:bookly_app/const.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/book_action.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_item.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/featured_book_list.dart';
 import 'package:bookly_app/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 import 'widgets/book_rating.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -32,59 +32,46 @@ class DetailsScreen extends StatelessWidget {
                 icon: const Icon(Icons.close))),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.25),
-                child: const CustomBookItem()),
-            const SizedBox(
-              height: 40,
+          child: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: width * 0.25),
+                    child: const SizedBox(
+                      height: 250,
+                        child: CustomBookItem())),
+                const SizedBox(
+                  height: 40,
+                ),
+                Text(
+                  'The Jungle Book',
+                  style: Styles.textStyle30.copyWith(fontFamily: kGtSectraFine),
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  'Rudyard Kipling',
+                  style: Styles.textStyle16.copyWith(color: Colors.grey),
+                ),
+                const SizedBox(height: 10),
+                const BookRating(),
+                const SizedBox(height: 20),
+                const BookAction(),
+                const Expanded(child: SizedBox(height: 50)),
+                const Align(
+                    alignment: Alignment.topLeft,
+                    child: Text('You can also like')),
+                const SizedBox(height: 10),
+                const SizedBox(height: 130, child: FeaturedBooksList())
+              ],
             ),
-            Text(
-              'The Jungle Book',
-              style: Styles.textStyle30.copyWith(fontFamily: kGtSectraFine),
-            ),
-            const SizedBox(
-              height: 6,
-            ),
-            Text(
-              'Rudyard Kipling',
-              style: Styles.textStyle16.copyWith(color: Colors.grey),
-            ),
-            const SizedBox(height: 10),
-            const BookRating(),
-            const SizedBox(height: 20),
-            const BookAction()
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class BookAction extends StatelessWidget {
-  const BookAction({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CustomButton(
-          title: '19.99 \$',
-          backgroundColor: Colors.white,
-          titleColor: Colors.black,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
-        ),
-        CustomButton(
-          title: 'Free Preview',
-          backgroundColor: kOrange,
-          titleColor: Colors.white,
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
-        ),
-      ],
+          )
+        ],
+      )),
     );
   }
 }

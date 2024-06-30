@@ -1,7 +1,6 @@
 import 'package:bookly_app/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../../utils/assets.dart';
 import '../../../../../const.dart';
 import '../../../../../utils/styles.dart';
@@ -54,9 +53,9 @@ class BestSellerItem extends StatelessWidget {
                   const SizedBox(height: 3),
                   const Text('J.K Rowling',style: Styles.textStyle14),
                   const SizedBox(height: 3),
-                 Row(
+                 const Row(
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                   children: const [
+                   children: [
                      Text('19.9 \$',style: Styles.textStyle22),
                      BookRating()
                    ],
