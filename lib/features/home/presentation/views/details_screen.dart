@@ -12,40 +12,50 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width =MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kPrimaryColor,
         actions: [
-          Padding(padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
-          child: IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart))),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              child: IconButton(
+                  onPressed: () {}, icon: const Icon(Icons.shopping_cart))),
         ],
-        leading:Padding(padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
-
-        child: IconButton(onPressed: (){
-          GoRouter.of(context).pop();
-        }, icon: const Icon(Icons.close))) ,
-
+        leading: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+            child: IconButton(
+                onPressed: () {
+                  GoRouter.of(context).pop();
+                },
+                icon: const Icon(Icons.close))),
       ),
       body: SafeArea(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.symmetric(horizontal: width * 0.25),
-            child: const CustomBookItem()),
-            const SizedBox(height: 40,),
-            Text('The Jungle Book',
+            Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.25),
+                child: const CustomBookItem()),
+            const SizedBox(
+              height: 40,
+            ),
+            Text(
+              'The Jungle Book',
               style: Styles.textStyle30.copyWith(fontFamily: kGtSectraFine),
             ),
-            const SizedBox(height: 6,),
-            Text('Rudyard Kipling',
+            const SizedBox(
+              height: 6,
+            ),
+            Text(
+              'Rudyard Kipling',
               style: Styles.textStyle16.copyWith(color: Colors.grey),
             ),
             const SizedBox(height: 10),
             const BookRating(),
+            const SizedBox(height: 20),
             const BookAction()
           ],
-
         ),
       ),
     );
@@ -57,11 +67,24 @@ class BookAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        CustomButton()
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CustomButton(
+          title: '19.99 \$',
+          backgroundColor: Colors.white,
+          titleColor: Colors.black,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
+        ),
+        CustomButton(
+          title: 'Free Preview',
+          backgroundColor: kOrange,
+          titleColor: Colors.white,
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
+        ),
       ],
     );
   }
 }
-

@@ -5,3 +5,4 @@ const kTransitionDuration = Duration(seconds: 3);
 const kGtSectraFine = 'GT Sectra Fine';
 const kFeaturedBox = 'featured_box';
 const kNewestBox = 'newest_box';
+const Color kOrange=Color(0xffEF8262);
