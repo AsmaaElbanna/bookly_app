@@ -21,6 +21,7 @@ dependencies:
   equatable:
   dartz:
   dio:
+  flutter_bloc:
 
 dev_dependencies:
   flutter_test:
