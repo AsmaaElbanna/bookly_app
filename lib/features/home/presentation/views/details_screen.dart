@@ -42,7 +42,8 @@ class DetailsScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: width * 0.25),
                     child: const SizedBox(
                       height: 250,
-                        child: CustomBookItem())),
+                      child: CustomBookItem(),
+                    )),
                 const SizedBox(
                   height: 40,
                 ),
@@ -66,7 +67,7 @@ class DetailsScreen extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: Text('You can also like')),
                 const SizedBox(height: 10),
-                const SizedBox(height: 130, child: FeaturedBooksList())
+                const SizedBox(height: 130, child: FeaturedBooksListView())
               ],
             ),
           )

@@ -5,7 +5,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../../utils/app_router.dart';
 
 class CustomBookItem extends StatelessWidget {
-  const CustomBookItem({Key? key}) : super(key: key);
+  final String? imageURL;
+  const CustomBookItem({Key? key,  this.imageURL}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +20,9 @@ class CustomBookItem extends StatelessWidget {
         child: Container(
           decoration:  BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-            image: const DecorationImage(
-              image: AssetImage(AssetData.testImage),
+            image:  DecorationImage(
+              // image: AssetImage(AssetData.testImage),
+              image: NetworkImage(imageURL ?? ''),
               fit: BoxFit.cover
             )
           ),

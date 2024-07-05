@@ -21,7 +21,7 @@ dependencies:
   equatable:
   dartz:
   dio:
-  flutter_bloc:
+  flutter_bloc: ^8.1.1
   get_it:
 
 dev_dependencies:
