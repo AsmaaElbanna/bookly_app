@@ -23,6 +23,7 @@ dependencies:
   dio:
   flutter_bloc: ^8.1.1
   get_it:
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
