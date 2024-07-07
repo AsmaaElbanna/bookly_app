@@ -11,3 +11,6 @@ const kNewestBooksEndPoint =
     'volumes?Filtering=free-ebooks&Sorting=newest &q=computer science';
 const kFeaturedBooksEndPoint =
     'volumes?Filtering=free-ebooks&q=subject:Programming';
+
+const kSimilarBooksEndPoint =
+    'volumes?Filtering=free-ebooks&Sorting=relevance &q=subject:Programming';
