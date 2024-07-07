@@ -10,7 +10,8 @@ class SearchViewResult extends StatelessWidget {
     return ListView.builder(
       itemCount: 10,
       itemBuilder: (context, index) {
-      return const BestSellerItem();
+      // return const BestSellerItem();
+      return const Text('data');
     },);
   }
 }

@@ -59,7 +59,7 @@ class DetailsScreen extends StatelessWidget {
                   style: Styles.textStyle16.copyWith(color: Colors.grey),
                 ),
                 const SizedBox(height: 10),
-                const BookRating(),
+                const BookRating(rating: 4.5 ,count: 200),
                 const SizedBox(height: 20),
                 const BookAction(),
                 const Expanded(child: SizedBox(height: 50)),
