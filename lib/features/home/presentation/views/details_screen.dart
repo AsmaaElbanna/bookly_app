@@ -2,6 +2,7 @@ import 'package:bookly_app/const.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_action.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/featured_book_list.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:bookly_app/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -67,7 +68,7 @@ class DetailsScreen extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: Text('You can also like')),
                 const SizedBox(height: 10),
-                const SizedBox(height: 130, child: FeaturedBooksListView())
+                const SizedBox(height: 130, child: SimilarBooksListView())
               ],
             ),
           )
