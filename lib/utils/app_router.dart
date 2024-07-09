@@ -1,3 +1,4 @@
+import 'package:bookly_app/features/home/data/models/book_model.dart';
 import 'package:bookly_app/features/home/data/repo/home_repo.dart';
 import 'package:bookly_app/features/home/data/repo/home_repo_impl.dart';
 import 'package:bookly_app/features/home/presentation/manager/similar_books/similar_books_cubit.dart';
@@ -20,8 +21,8 @@ abstract class AppRouter {
         GoRoute(path: '/',builder: (context, state) => const SplashScreen(),),
         GoRoute(path: kHomeView,builder: (context, state) => const HomeScreen(),),
         GoRoute(path: kDetails,builder: (context, state) => BlocProvider(
-          create: (context) => SimilarBooksCubit(homeRepo: getIt.get<HomeRepoImpl>())..fetchSimilarBooks(category: 'category'),
-          child: const DetailsScreen(),
+          create: (context) => SimilarBooksCubit(homeRepo: getIt.get<HomeRepoImpl>()),
+          child:  DetailsScreen(book: state.extra as BookModel),
         ),),
         GoRoute(path: kSearch,builder: (context, state) => const SearchView() )
 
