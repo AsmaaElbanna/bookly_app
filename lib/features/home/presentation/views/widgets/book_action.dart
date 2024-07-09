@@ -1,4 +1,5 @@
 import 'package:bookly_app/features/home/data/models/book_model.dart';
+import 'package:bookly_app/utils/function/launch_url.dart';
 import 'package:flutter/material.dart';
 import '../../../../../common_widget/custom_button.dart';
 import '../../../../../const.dart';
@@ -11,13 +12,11 @@ class BookAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CustomButton(
-          onPressed: (){
-
-          },
+          onPressed: () {},
           title: 'Free',
           backgroundColor: Colors.white,
           titleColor: Colors.black,
@@ -25,8 +24,9 @@ class BookAction extends StatelessWidget {
               topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
         ),
         CustomButton(
-          onPressed: (){
-
+          onPressed: () async {
+            debugPrint('Preview link: ${book.volumeInfo.previewLink}');
+            customLaunchURL(context, book.volumeInfo.previewLink!);
           },
           title: 'Free Preview',
           backgroundColor: kOrange,
